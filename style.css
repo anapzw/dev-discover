@@ -6,8 +6,40 @@
     list-style: none;
 }
 
+:root {
+    --text-color-primary: #000;
+    --text-color-secondary: #262626;
+    --text-color-input: #313131; 
+    --background-color-btn: #FFEE58;
+    --background-color-btn-hover: #feea2e;
+    --background-color-container-result:#F4F4F4;
+    --body-background-color: #2320A4;
+    --background-color-search-bar: #FFF;
+    --background-color-search-bar-input: rgba(224, 225, 228, 0.45);
+    --background-color-repositories: #fff;
+    --background-color-tag-pr: #F00;
+    --background-color-tag-followers: #AD00FF;
+    --background-color-tag-following: #0500FF;
+}
+
+.light {
+    --text-color-primary: #FFFFFF;
+    --text-color-secondary: #F4F4F4;
+    --text-color-input: rgba(244, 244, 244, 0.7);
+    --background-color-btn: #50F573;
+    --background-color-btn-hover: #20fc50;
+    --background-color-container-result: #262626;
+    --body-background-color: #161616;
+    --background-color-search-bar: #262626;
+    --background-color-search-bar-input: rgba(224, 225, 228, 0.08);
+    --background-color-repositories: #434343;
+    --background-color-tag-pr: #EF3F3F;
+    --background-color-tag-followers: #02976A;
+    --background-color-tag-following: #228095;
+}
+
 body {
-    background-color: #2320A4;
+    background-color: var(--body-background-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +76,7 @@ header {
     justify-content: space-between;
 
     border-radius: 15px;
-    background: #FFF;
+    background-color: var(--background-color-search-bar);
 }
 
 #search-bar input {
@@ -54,9 +86,10 @@ header {
     padding: 17px 50px;
     display: flex;
     align-items: flex-start;
-
+    
+    color: var(--text-color-input);
     border-radius: 10px;
-    background: rgba(224, 225, 228, 0.45);
+    background-color: var(--background-color-search-bar-input);
     border-style: none;
 }
 
@@ -70,8 +103,8 @@ header {
     margin: 0 15px;
 }
 
-.btn-buscar {
-    background-color: #FFEE58;
+.btn-search {
+    background-color: var(--background-color-btn);
     border-style: none;
     border-radius: 10px;
     width: 170px;
@@ -86,14 +119,14 @@ header {
     cursor: pointer;
 }
 
-.btn-buscar:hover {
-    background-color: #feea2e;
+.btn-search:hover {
+    background-color: var(--background-color-btn-hover);
 }
 
 #container-result {
     width: 740px;
     padding: 64px 58px;
-    background-color: #F4F4F4;
+    background-color: var(--background-color-container-result);
     border-radius: 20px;
     border-style: none;
     margin-bottom: 10%;
@@ -126,7 +159,7 @@ li img {
 }
 
 li p {
-    color: #262626;
+    color: var(--text-color-secondary);
     font-size: 10px;
     font-style: normal;
     font-weight: 500;
@@ -142,7 +175,7 @@ li p {
 }
 
 h1 {
-    color: #000;
+    color: var(--text-color-primary);
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
@@ -150,7 +183,7 @@ h1 {
 }
 
 #username {
-    color: #000;
+    color: var(--text-color-primary);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -162,7 +195,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    color: #262626;
+    color: var(--text-color-secondary);
     height: 63px;
     max-height: 90px;
 }
@@ -175,7 +208,7 @@ h1 {
 }
 
 #public-repositories {
-    background: #F00;
+    background: var(--background-color-tag-pr);
     border-radius: 4px;
     color: #F4F4F4;
     padding: 2px 10px;
@@ -187,9 +220,9 @@ h1 {
 }
 
 #followers {
-    background: #AD00FF;
+    background: var(--background-color-tag-followers);
     border-radius: 4px;
-    color: #F4F4F4;
+    color:#F4F4F4;
     padding: 2px 10px;
     text-align: center;
     font-size: 10px;
@@ -199,7 +232,7 @@ h1 {
 }
 
 #following {
-    background: #0500FF;
+    background: var(--background-color-tag-following);
     border-radius: 4px;
     color: #F4F4F4;
     padding: 2px 10px;
@@ -216,7 +249,7 @@ h1 {
     align-items: flex-start;
     gap: 15px;
     border-radius: 20px;
-    background: #FFF;
+    background: var(--background-color-repositories);
     width: 100%;
     height: 188px;
 }
