@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevDiscover</title>
+
+    <link rel="shortcut icon" href="./assets/icon-logo.ico">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <a href="index.html"><img src="./assets/logo-dev-discover.png" alt="Logo DevDiscover" width="310px"></a>
+            <button id="btn-theme"><img src="./assets/icon-sun.svg" alt="" id="icon-theme"></button>
+        </header>
+        <div id="search-bar">
+            <div>
+                <input type="text" placeholder="Search GitHub username" id="input">
+                <span id=span></span>
+            </div>
+            <button class="btn-buscar" id="btn-search">Search</button>
+        </div>
+    </div>
+    <main>
+        <div id="container-result">
+            <section id="section-1">
+                <img src="./assets/logo-github.png" alt="Avatar" width="180px" height="180px" id="avatar">
+                <ul id="profile-details">
+                    <li id="location">
+                        <img src="./assets/icon-pin.svg" alt="" class="">
+                        <p>Not Avaliable</p>
+                    </li>
+                    <li id="website">
+                        <img src="./assets/icon-link.svg" alt="">
+                        <p>Not Avaliable</p>
+                    </li>
+                    <li id="company">
+                        <img src="./assets/icon-company.svg" alt="">
+                        <p>Not Avaliable</p>
+                    </li>
+                    <li id="linkedin">
+                        <img src="./assets/icon-linkedin.svg" alt="">
+                        <p>Not Avaliable</p>
+                    </li>
+                    <li id="github">
+                        <img src="./assets/icon-github.svg" alt="">
+                        <p>Not Avaliable</p>
+                    </li>
+                </ul>
+            </section>
+            <section id="section-2">
+                <div id="names-profile">
+                    <h1>GitHub</h1>
+                    <p id="username">github</p>
+                </div>
+                <p id="bio-description">This profile has no bio</p>
+                <ul id="cards-tags">
+                    <li class="result-items">
+                        <span id="public-repositories">Public Repositories: </span>
+                    </li>
+                    <li class="result-items">
+                        <span id="followers">Followers: </span>
+                    </li>
+                    <li class="result-items">
+                        <span id="following">Following: </span>
+                    </li>
+                </ul>
+                <div id="repositories">
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
