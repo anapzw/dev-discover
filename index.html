@@ -14,18 +14,17 @@
             <a href="index.html"><img src="./assets/logo-dev-discover.png" alt="Logo DevDiscover" width="310px"></a>
             <button id="btn-theme"><img src="./assets/icon-sun.svg" alt="" id="icon-theme"></button>
         </header>
-        <div id="search-bar">
+        <form id="search-bar">
             <div>
-                <input type="text" placeholder="Search GitHub username" id="input">
+                <input type="text" placeholder="Search GitHub username" id="input" required>
                 <span id=span></span>
             </div>
             <button class="btn-search" id="btn-search">Search</button>
-        </div>
+        </form>
     </div>
     <main>
         <div id="container-result">
             <section id="section-1">
-                <img src="./assets/logo-github.png" alt="Avatar" width="180px" height="180px" id="avatar">
                 <ul id="profile-details">
                     <li id="location">
                         <img src="./assets/icon-pin.svg" alt="Icon pin" id="img-pin">
@@ -51,23 +50,24 @@
             </section>
             <section id="section-2">
                 <div id="names-profile">
-                    <h1>GitHub</h1>
-                    <p id="username">github</p>
+                    <h1></h1>
+                    <p id="username"></p>
                 </div>
-                <p id="bio-description">This profile has no bio</p>
+                <p id="bio-description"></p>
                 <ul id="cards-tags">
                     <li class="result-items">
-                        <span id="public-repositories">Public Repositories: </span>
+                        <span id="public-repositories"></span>
                     </li>
                     <li class="result-items">
-                        <span id="followers">Followers: </span>
+                        <span id="followers"></span>
                     </li>
                     <li class="result-items">
-                        <span id="following">Following: </span>
+                        <span id="following"></span>
                     </li>
                 </ul>
                 <div id="repositories">
-
+                    <ul id="projects">
+                    </ul>
                 </div>
             </section>
         </div>
