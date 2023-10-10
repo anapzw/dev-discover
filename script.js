@@ -54,19 +54,22 @@ form.addEventListener('submit', function(e){
     const search = document.getElementById("input").value
 
     const originalName = search.split(' ').join('')
-    
-    document.getElementById("section-1").innerHTML = ""
 
     fetch("https://api.github.com/users/"+originalName)
     .then((result) => result.json())
     .then((data) => {
-        document.getElementById("section-1").innerHTML = `
-            <img src="${data.avatar_url}"/>
+        document.getElementById("img-avatar").innerHTML = `
+            <img id="img-avatar" src="${data.avatar_url}"/>
+        `
+
+        document.getElementById("github").innerHTML = `
+            <img src="./assets/icon-github.svg" alt="Icon GitHub" id="img-github">
+            <a target="_blank" href="https://www.github.com/${originalName}"><p>${data.url}</p></a>
         `
 
         document.getElementById("names-profile").innerHTML = `
             <h1>${data.name}</>
-            <a target="_blank" href="https://www.github.com/${originalName}"><p id="username">@${data.login}</p></a>
+            <p id="username">@${data.login}</p>
         `
         document.getElementById("bio-description").innerHTML = `
             <p id="bio-description">${data.bio}</p>
@@ -80,12 +83,23 @@ form.addEventListener('submit', function(e){
         document.getElementById("following").innerHTML = `
             <span>Following: ${data.following}</span>
         `
-
-        document.getElementById("projects").innerHTML = `
-            <span><img src="./assets/icon-book.svg"><span>
-        `
+        // document.getElementById("projects").innerHTML = `
+        //     <span><img src="./assets/icon-book.svg"><span>
+        // `        
     })
     .catch(error => {
         console.error("Erro ao buscar informações do usuário do GitHub:", error);
     });
+
+    const repositories = document.getElementById("projects")
+    fetch(`https://api.github.com/users/${originalName}/repos?per_page=10`)
+        .then((result) => result.json())
+        .then((data) => {
+            data.map(item => {
+                const li = document.createElement('li')
+                li.classList.add("item-project")
+                li.textContent = `${item.name}`
+                repositories.appendChild(li)
+            })
+    })
 })

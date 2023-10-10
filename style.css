@@ -3,14 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Approach Mono TRIAL', sans-serif;
-    list-style: none;
 }
 
 :root {
     --text-color-primary: #000;
     --text-color-secondary: #262626;
     --text-color-input: #313131; 
-    --background-color-btn: #FFEE58;
+    --background-color-btn: #FFD601;
     --background-color-btn-hover: #feea2e;
     --background-color-container-result:#F4F4F4;
     --body-background-color: #2320A4;
@@ -142,7 +141,7 @@ header {
     gap: 30px;
 }
 
-#section-1 img {
+#img-avatar {
     width: 180px;
     height: 180px;
     border-radius: 100%;
@@ -212,6 +211,7 @@ h1 {
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 10px;
+    list-style: none;
 }
 
 #public-repositories {
@@ -254,7 +254,6 @@ h1 {
     display: flex;
     padding: 25px;
     align-items: flex-start;
-    gap: 15px;
     border-radius: 20px;
     background: var(--background-color-repositories);
     width: 100%;
@@ -264,12 +263,13 @@ h1 {
 
 #projects {
     display: flex;
+    flex-wrap: wrap;
     width: 169.5px;
     height: 138px;
     max-width: 270px;
     max-height: 150px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
     color: #000;
+    font-size: 14px;
 }
